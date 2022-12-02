@@ -6,14 +6,9 @@ const Gallery = ({ gallery }) => {
 			{gallery.map((item) => (
 				<div
 					key={item.id}
-					className="p-2 group cursor-pointer transition duration-100 ease-in transform sm:hover:scale-105 hover:z-50"
+					className="p-2 group cursor-pointer transition duration-100 ease-in transform hover:scale-105"
 				>
-					<Image
-						src={item.galleryImg}
-						alt={item.galleryAlt}
-						height={500}
-						width={1920}
-					/>
+					<Image src={item.galleryImg} alt={item.galleryAlt} className="h-80" />
 				</div>
 			))}
 		</div>

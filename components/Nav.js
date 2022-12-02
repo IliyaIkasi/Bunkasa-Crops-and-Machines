@@ -21,8 +21,6 @@ const Nav = () => {
 			var current = window.pageYOffset;
 			if (previous > current) {
 				document.getElementById("navbar").style.top = "0";
-			} else {
-				document.getElementById("navbar").style.top = "-70px";
 			}
 
 			previous = current;
@@ -31,7 +29,7 @@ const Nav = () => {
 
 	return (
 		<div
-			className="flex justify-between w-full py-2 px-10 fixed sm:static"
+			className="flex justify-between w-full py-8 sm:py-2 px-10 fixed sm:static bg-green-700 sm:bg-transparent z-50"
 			id="navbar"
 		>
 			<div className="flex w-3/5 sm:w-4/5 justify-between text-center">

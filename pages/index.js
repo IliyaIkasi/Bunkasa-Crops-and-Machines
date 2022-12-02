@@ -89,7 +89,7 @@ export default function Home({
 			</div>
 
 			<div className="flex flex-col text-gray-500 h-full border pb-10">
-				<div className="flex flex-col justify-center text-center px-10 sm:px-0 h-60">
+				<div className="flex flex-col justify-center text-center px-10 py-20 sm:px-0">
 					<div className="">
 						<h1 className="text-3xl">{productTitle.header.title}</h1>
 					</div>
@@ -97,7 +97,7 @@ export default function Home({
 						<p className="text-sm">{productTitle.header.desc}</p>
 					</div>
 				</div>
-				<div>
+				<div className="py-8">
 					<ProductItem products={productTitle.content} />
 				</div>
 				<div className="">
@@ -105,7 +105,7 @@ export default function Home({
 				</div>
 			</div>
 
-			<div className="flex flex-col lg:flex-row text-gray-500 h-screen py-4 lg:h-full lg:py-20">
+			<div className="flex flex-col lg:flex-row text-gray-500 h-full py-4 lg:h-full lg:py-20">
 				<div className="flex h-2/5 w-11/12 lg:h-full lg:w-1/2 self-center lg:justify-center">
 					<Image
 						src={whyImg}
@@ -122,7 +122,7 @@ export default function Home({
 							quisquam.
 						</p>
 					</div>
-					<div className="pt-4 w-full">
+					<div className="pt-4 w-full h-full">
 						<div className="flex w-full">
 							<CheckCircleIcon className="text-headerGreen" height={50} />
 							<div className="flex flex-col w-full pl-8">
