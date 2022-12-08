@@ -7,7 +7,7 @@ import welcomeImg from "../public/assets/tractor12.jpg";
 import whyImg from "../public/assets/agric06.jpg";
 import dummyData from "../dummyData";
 import Products from "../components/Products";
-import ProductItem from "../components/ProductItem";
+import ProductItem from "../components/products/ProductItem";
 import { CheckCircleIcon } from "@heroicons/react/24/solid";
 
 export default function Home({
@@ -97,11 +97,11 @@ export default function Home({
 						<p className="text-sm">{productTitle.header.desc}</p>
 					</div>
 				</div>
-				<div className="py-8">
-					<ProductItem products={productTitle.content} />
-				</div>
 				<div className="">
-					<Products products={productContent} />
+					<Products
+						products={productContent}
+						productTitle={productTitle.content}
+					/>
 				</div>
 			</div>
 
