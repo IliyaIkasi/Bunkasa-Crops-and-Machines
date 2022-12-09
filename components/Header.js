@@ -1,5 +1,13 @@
 import styles from "../styles/Home.module.css";
 import { MapIcon } from "@heroicons/react/24/outline";
+import {
+	FaAddressBook,
+	FaFacebook,
+	FaInstagram,
+	FaWhatsapp,
+	FaTwitter,
+	FaYoutube,
+} from "react-icons/fa";
 import Link from "next/link";
 import { useEffect } from "react";
 
@@ -26,11 +34,17 @@ const Header = () => {
 			className="hidden sm:flex w-full justify-between sm:pt-2 sm:pb-2 border-b border-b-green-900 text-sm"
 			id="headerBar"
 		>
-			<div className={`flex pl-12 ${styles.hover}`}>
-				<MapIcon className="h-5 cursor-pointer" />
-				<h2 className="pl-2 cursor-pointer">
-					Km 31, Kaduna / Abuja Expressway, Kaduna State
-				</h2>
+			<div className={"flex pl-12 justify-between"}>
+				<div className={`flex cursor-pointer ${styles.hover}`}>
+					<MapIcon className="h-5" />
+					<h2 className="pl-2 cursor-pointer">
+						Km 31, Kaduna / Abuja Expressway, Kaduna State
+					</h2>
+				</div>
+				<div className={`flex ml-12 gap-2 cursor-pointer ${styles.hover}`}>
+					<FaAddressBook className="h-5" />
+					<span>cropsandmachines@gmail.com</span>
+				</div>
 			</div>
 			<div className="flex pr-12">
 				<Link href="/facebook">

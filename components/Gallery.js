@@ -8,7 +8,7 @@ const Gallery = ({ gallery }) => {
 					key={item.id}
 					className="p-2 group cursor-pointer transition duration-100 ease-in transform hover:scale-105"
 				>
-					<Image src={item.galleryImg} alt={item.galleryAlt} className="h-80" />
+					<Image src={item.galleryImg} alt={item.galleryAlt} className="h-60" />
 				</div>
 			))}
 		</div>

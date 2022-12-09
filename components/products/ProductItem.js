@@ -1,17 +1,20 @@
 import { VideoCameraIcon } from "@heroicons/react/24/outline";
 import { useRouter } from "next/router";
 
-const ProductItem = ({ productTitle, activeTab, setActiveTab }) => {
+const ProductItem = ({ products, selectTab }) => {
+	// console.log(products);
+
 	return (
 		<div className="flex justify-evenly h-32 items-center">
-			{Object.entries(productTitle).map(([key, { title }]) => (
+			{Object.entries(products).map(([key, { title }]) => (
 				<div
 					key={key}
+					id={key}
 					className="flex flex-col items-center hover:text-headerGreen cursor-pointer border-x-2 w-full first:border-x-0 last:border-x-0"
-					onClick={setActiveTab(key)}
+					onClick={selectTab}
 				>
-					<VideoCameraIcon height={40} />
-					<span>{title}</span>
+					<VideoCameraIcon height={40} id={key} />
+					<span id={key}>{title}</span>
 				</div>
 			))}
 		</div>

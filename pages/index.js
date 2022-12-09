@@ -7,8 +7,8 @@ import welcomeImg from "../public/assets/tractor12.jpg";
 import whyImg from "../public/assets/agric06.jpg";
 import dummyData from "../dummyData";
 import Products from "../components/Products";
-import ProductItem from "../components/products/ProductItem";
 import { CheckCircleIcon } from "@heroicons/react/24/solid";
+import { useState } from "react";
 
 export default function Home({
 	featuredData,
@@ -91,17 +91,14 @@ export default function Home({
 			<div className="flex flex-col text-gray-500 h-full border pb-10">
 				<div className="flex flex-col justify-center text-center px-10 py-20 sm:px-0">
 					<div className="">
-						<h1 className="text-3xl">{productTitle.header.title}</h1>
+						<h1 className="text-3xl">{productTitle.title}</h1>
 					</div>
 					<div className="pt-4 px-8">
-						<p className="text-sm">{productTitle.header.desc}</p>
+						<p className="text-sm">{productTitle.desc}</p>
 					</div>
 				</div>
 				<div className="">
-					<Products
-						products={productContent}
-						productTitle={productTitle.content}
-					/>
+					<Products products={productContent} />
 				</div>
 			</div>
 
@@ -177,19 +174,14 @@ export default function Home({
 	);
 }
 
-export function getServerSideProps(context) {
-	const query = context.query.productQuery;
-
+export function getServerSideProps() {
 	const request = dummyData;
-	const productReq =
-		dummyData.productData.content[query]?.product ||
-		dummyData.productData.content.fetchVegetables.product;
 
 	return {
 		props: {
 			featuredData: request.featuredData,
-			productTitle: request.productData,
-			productContent: productReq,
+			productTitle: request.productData.header,
+			productContent: request.productData.content,
 			galleryContent: request.GalleryData,
 		},
 	};

@@ -2,7 +2,7 @@ import Image from "next/image";
 import { StarIcon } from "@heroicons/react/24/outline";
 import { StarIcon as StarIconSolid } from "@heroicons/react/24/solid";
 
-const ProductsTab = ({ products, activeTab, setActiveTab }) => {
+const ProductsTab = ({ products }) => {
 	return (
 		<div className="flex flex-col sm:grid sm:grid-cols-2 lg:grid-cols-3 justify-between">
 			{products.map((product) => (
