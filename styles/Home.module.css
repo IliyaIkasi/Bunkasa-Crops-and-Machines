@@ -11,3 +11,17 @@
 .hover:hover {
 	color: green;
 }
+
+.footerHeader {
+	display: flex;
+	height: 6rem;
+	font-size: larger;
+	font-weight: bold;
+	align-items: center;
+}
+
+.footerHover:hover {
+	color: green;
+	background-color: white;
+	cursor: pointer;
+}

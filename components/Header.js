@@ -2,14 +2,13 @@ import styles from "../styles/Home.module.css";
 import { MapIcon } from "@heroicons/react/24/outline";
 import {
 	FaAddressBook,
-	FaFacebook,
+	FaFacebookF,
 	FaInstagram,
 	FaWhatsapp,
 	FaTwitter,
 	FaYoutube,
 } from "react-icons/fa";
 import Link from "next/link";
-import { useEffect } from "react";
 
 const Header = () => {
 	// useEffect(() => {
@@ -46,28 +45,32 @@ const Header = () => {
 					<span>cropsandmachines@gmail.com</span>
 				</div>
 			</div>
-			<div className="flex pr-12">
+			<div className="flex pr-12 v">
 				<Link href="/facebook">
-					<MapIcon className={`${styles.hover} h-5 ml-2 cursor-pointer`} />
+					<FaFacebookF
+						className={`${styles.hover} w-full h-5 ml-2 cursor-pointer`}
+					/>
 				</Link>
-
 				<Link href="/twitter">
-					<MapIcon className={`${styles.hover} h-5 ml-2 cursor-pointer`} />
+					<FaInstagram
+						className={`${styles.hover} w-full h-5 ml-2 cursor-pointer`}
+					/>
 				</Link>
-
 				<Link href="/linkedIn">
-					<MapIcon className={`${styles.hover} h-5 ml-2 cursor-pointer`} />
+					<FaWhatsapp
+						className={`${styles.hover} w-full h-5 ml-2 cursor-pointer`}
+					/>
 				</Link>
-
 				<Link href="/youtube">
-					<MapIcon className={`${styles.hover} h-5 ml-2 cursor-pointer`} />
+					<FaTwitter
+						className={`${styles.hover} w-full h-5 ml-2 cursor-pointer`}
+					/>
 				</Link>
-
 				<Link href="/Be">
-					<MapIcon className={`${styles.hover} h-5 ml-2 cursor-pointer`} />
+					<FaYoutube
+						className={`${styles.hover} w-full h-5 ml-2 cursor-pointer`}
+					/>
 				</Link>
-
-				<Link href=""></Link>
 			</div>
 		</div>
 	);
