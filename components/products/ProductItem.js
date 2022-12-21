@@ -1,9 +1,6 @@
 import { VideoCameraIcon } from "@heroicons/react/24/outline";
-import { useRouter } from "next/router";
 
 const ProductItem = ({ products, selectTab }) => {
-	// console.log(products);
-
 	return (
 		<div className="flex justify-evenly h-32 items-center">
 			{Object.entries(products).map(([key, { title }]) => (

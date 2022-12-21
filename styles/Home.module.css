@@ -12,6 +12,15 @@
 	color: green;
 }
 
+.toggle {
+	display: flex;
+	flex-direction: column;
+}
+
+.toggleAnswer {
+	display: none;
+}
+
 .footerHeader {
 	display: flex;
 	height: 6rem;
@@ -24,4 +33,10 @@
 	color: green;
 	background-color: white;
 	cursor: pointer;
+}
+
+@media (min-width: 640px) and (max-width: 2000px) {
+	#collapseToggle {
+		display: none;
+	}
 }

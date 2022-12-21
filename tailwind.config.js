@@ -14,7 +14,7 @@ module.exports = {
 				0.5: "1px",
 			},
 			colors: {
-				headerGreen: "green",
+				headerGreen: "rgb(0 136 69)",
 			},
 			backgroundImage: {
 				bgImg: "url(../public/assets/bgImg.jpg)",

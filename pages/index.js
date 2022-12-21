@@ -1,31 +1,20 @@
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
-import Features from "../components/Features";
-import Gallery from "../components/Gallery";
+import Features from "../components/index/Features";
+import Gallery from "../components/index/Gallery";
 import welcomeImg from "../public/assets/tractor12.jpg";
 import whyImg from "../public/assets/agric06.jpg";
-import logoImg from "../public/assets/logo.jpg";
 import dummyData from "../dummyData";
-import Products from "../components/Products";
-import styles from "../styles/Home.module.css";
+import Products from "../components/index/Products";
 import { CheckCircleIcon } from "@heroicons/react/24/solid";
-import {
-	FaFacebookF,
-	FaTwitter,
-	FaWhatsapp,
-	FaYoutube,
-	FaPaperPlane,
-	FaEnvelopeOpen,
-	FaHeadphones,
-	FaLinkedinIn,
-} from "react-icons/fa";
 
 export default function Home({
 	featuredData,
 	productTitle,
 	productContent,
 	galleryContent,
+	isFooter,
 }) {
 	return (
 		<div className="">
@@ -35,7 +24,8 @@ export default function Home({
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
 
-			<div className="flex flex-col font-bold text-center justify-center h-screen sm:h-[80vh]">
+			{/* Landing Section */}
+			<div className="flex flex-col font-bold bg-bgImg bg-cover text-center justify-center h-screen">
 				<h1 className="text-5xl mb-3">
 					Crops <span className="text-green-900">&</span> Machines
 				</h1>
@@ -52,6 +42,8 @@ export default function Home({
 					</Link>
 				</div>
 			</div>
+
+			{/* Welcome Section */}
 			<div className="flex flex-col lg:flex-row text-gray-500 h-screen py-4 lg:h-full lg:py-20">
 				<div className="flex h-2/5 w-11/12 lg:h-full lg:w-1/2 self-center lg:justify-center">
 					<Image
@@ -85,6 +77,7 @@ export default function Home({
 				</div>
 			</div>
 
+			{/* Featured Section */}
 			<div className="text-gray-500 h-full border py-10 bg-lime-50">
 				<div className="flex flex-col justify-center text-center px-10 h-60">
 					<div className="">
@@ -99,6 +92,7 @@ export default function Home({
 				</div>
 			</div>
 
+			{/* Products Section */}
 			<div className="flex flex-col text-gray-500 h-full border pb-10">
 				<div className="flex flex-col justify-center text-center px-10 py-20 sm:px-0">
 					<div className="">
@@ -113,6 +107,7 @@ export default function Home({
 				</div>
 			</div>
 
+			{/* Why Choose Us Section */}
 			<div className="flex flex-col lg:flex-row text-gray-500 h-full py-4 lg:h-full lg:py-20">
 				<div className="flex h-2/5 w-11/12 lg:h-full lg:w-1/2 self-center lg:justify-center">
 					<Image
@@ -168,6 +163,7 @@ export default function Home({
 				</div>
 			</div>
 
+			{/* Gallery Section */}
 			<div className="text-gray-500 h-full border py-10 bg-lime-50">
 				<div className="flex flex-col justify-center text-center px-10 h-60">
 					<div className="">
@@ -179,115 +175,6 @@ export default function Home({
 				</div>
 				<div className="">
 					<Gallery gallery={galleryContent.content} />
-				</div>
-			</div>
-
-			<div className="flex bg-headerGreen h-96 w-full px-4 gap-12">
-				<div className="w-1/4 h-full">
-					<div className={`${styles.footerHeader}`}>
-						<Image src={logoImg} alt="" width={100} height={100} />
-					</div>
-					<div className="mb-4 text-sm">
-						<h2 className="leading-7">
-							Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam
-							maiores ad perferendis aspernatur nostrum autem quae, laborum
-							quisquam, assumenda vel nulla, provident nam commodi veniam
-							perspiciatis ipsum odit.
-						</h2>
-					</div>
-					<div className="flex w-full justify-around">
-						<Link
-							href="/facebook"
-							className={`${styles.footerHover} border rounded-xl p-2`}
-						>
-							<FaFacebookF className="w-full h-5" />
-						</Link>
-						<Link
-							href="/twitter"
-							className={`${styles.footerHover} border rounded-xl p-2`}
-						>
-							<FaTwitter className="w-full h-5" />
-						</Link>
-						<Link
-							href="/linkedIn"
-							className={`${styles.footerHover} border rounded-xl p-2`}
-						>
-							<FaLinkedinIn className="w-full h-5" />
-						</Link>
-						<Link
-							href="/youtube"
-							className={`${styles.footerHover} border rounded-xl p-2`}
-						>
-							<FaYoutube className="w-full h-5" />
-						</Link>
-						<Link
-							href="/Whatsapp"
-							className={`${styles.footerHover} border rounded-xl p-2`}
-						>
-							<FaWhatsapp className="w-full h-5" />
-						</Link>
-					</div>
-				</div>
-				<div className="w-1/4 h-full">
-					<div className={`${styles.footerHeader}`}>
-						<h1>Customer Support</h1>
-					</div>
-					<div className="leading-8 text-sm">
-						<ul>
-							<li>Help and Ordering</li>
-							<li>Privacy and Policy</li>
-							<li>Return & Cancellation</li>
-							<li>Delevery Schedule</li>
-							<li>Get a Call</li>
-							<li>Online Enquiry</li>
-						</ul>
-					</div>
-				</div>
-				<div className="w-1/4">
-					<div className={`${styles.footerHeader}`}>
-						<h1>Contact Info</h1>
-					</div>
-					<div className="text-sm leading-10">
-						<div className="flex items-center w-full leading-6">
-							<FaPaperPlane className="h-5" />
-							<h2 className="pl-2 cursor-pointer">
-								Km 31, Kaduna / Abuja Expressway, Kaduna State
-							</h2>
-						</div>
-						<div className="flex items-center w-full">
-							<FaEnvelopeOpen className="h-5" />
-							<span className="pl-2">cropsandmachines@gmail.com</span>
-						</div>
-						<div className="flex items-center w-full">
-							<FaHeadphones className="h-5" />
-							<span className="pl-2">+234 802 358 3974</span>
-						</div>
-					</div>
-				</div>
-				<div className="w-1/4">
-					<div className={`${styles.footerHeader}`}>
-						<h1>NewsLetters</h1>
-					</div>
-					<div className="text-sm">
-						<div className="mb-4">
-							<span>
-								Enter Your Email and We Would Send You Latest Information Plans.
-							</span>
-						</div>
-						<div className="flex flex-col ">
-							<input
-								type="text"
-								placeholder="Enter Your Email"
-								className="h-8 pl-2 mb-2"
-							/>
-							<button
-								type="submit"
-								className={`${styles.footerHover} border rounded-md h-12 font-bold w-32`}
-							>
-								Subscribe
-							</button>
-						</div>
-					</div>
 				</div>
 			</div>
 		</div>

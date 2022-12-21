@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
-import ProductItem from "./products/ProductItem";
-import ProductsTab from "./products/ProductsTab";
-import dummyData from "../dummyData";
+import ProductItem from "../products/ProductItem";
+import ProductsTab from "../products/ProductsTab";
+import dummyData from "../../dummyData";
 
 export default function Products({ products }) {
 	const [activeTabValue, setActiveTabValue] = useState("fetchVegetables");

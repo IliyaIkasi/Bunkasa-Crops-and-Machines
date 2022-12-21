@@ -270,6 +270,77 @@ export default {
 			// { id: 12, galleryImg: machines01, galleryAlt: "image of animal03" },
 		],
 	},
+	freqQuestions: {
+		header: {
+			title: "Frequently Asked Questions",
+		},
+		content: [
+			{
+				id: 1,
+				topic: "Natural Food",
+				answer:
+					"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam" +
+					"maiores ad perferendis aspernatur nostrum autem quae, laborum" +
+					"quisquam, assumenda vel nulla, provident nam commodi veniam" +
+					"perspiciatis ipsum odit? Mollitia, nihil.",
+			},
+			{
+				id: 2,
+				topic: "Natural Food",
+				answer:
+					"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam" +
+					"maiores ad perferendis aspernatur nostrum autem quae, laborum" +
+					"quisquam, assumenda vel nulla, provident nam commodi veniam" +
+					"perspiciatis ipsum odit? Mollitia, nihil.",
+			},
+			{
+				id: 3,
+				topic: "Natural Food",
+				answer:
+					"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam" +
+					"maiores ad perferendis aspernatur nostrum autem quae, laborum" +
+					"quisquam, assumenda vel nulla, provident nam commodi veniam" +
+					"perspiciatis ipsum odit? Mollitia, nihil.",
+			},
+		],
+	},
+	whatWeDoData: {
+		header: {
+			title: "What We Do",
+			desc:
+				"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam" +
+				"maiores ad perferendis aspernatur nostrum autem quae.",
+		},
+		content: [
+			{
+				id: 1,
+				title: "Natural Food",
+				desc:
+					"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam" +
+					"maiores ad perferendis aspernatur nostrum autem quae, laborum" +
+					"quisquam, assumenda vel nulla, provident nam commodi veniam" +
+					"perspiciatis ipsum odit? Mollitia, nihil.",
+			},
+			{
+				id: 2,
+				title: "Natural Food",
+				desc:
+					"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam" +
+					"maiores ad perferendis aspernatur nostrum autem quae, laborum" +
+					"quisquam, assumenda vel nulla, provident nam commodi veniam" +
+					"perspiciatis ipsum odit? Mollitia, nihil.",
+			},
+			{
+				id: 3,
+				title: "Natural Food",
+				desc:
+					"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam" +
+					"maiores ad perferendis aspernatur nostrum autem quae, laborum" +
+					"quisquam, assumenda vel nulla, provident nam commodi veniam" +
+					"perspiciatis ipsum odit? Mollitia, nihil.",
+			},
+		],
+	},
 };
 
 // export const productData = [{ header: {title: "Our Products"}, content: [{}, {}, {}] }];
