@@ -30,8 +30,8 @@ export default function Home({
 					Crops <span className="text-green-900">&</span> Machines
 				</h1>
 				<h3 className="">
-					Bringin <span className="text-green-900">The </span>
-					of <span className="text-green-900">Best</span> Agriculture
+					Bringing <span className="text-green-900">The </span>
+					Best <span className="text-green-900">of</span> Agriculture
 				</h3>
 				<div className="pt-10">
 					<Link
